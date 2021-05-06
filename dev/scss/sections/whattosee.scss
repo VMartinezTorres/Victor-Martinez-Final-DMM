@@ -1,0 +1,65 @@
+/* =============
+    whattosee
+============= */
+.whattosee-image {
+	background-size: cover;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	//width: 500px;
+	height: 200px;
+	padding: 20px;
+}
+
+.new-content {
+	h2 {
+		color: $lightopenskyblue;
+		background-color: $royalred;
+	}
+}
+
+#imgg1 {
+	.whattosee-image {
+		background: url("../../../deploy/img/redcoats1.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+#imgg2 {
+	.whattosee-image {
+		background: url("../../../deploy/img/iwojima.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+#imgg3 {
+	.whattosee-image {
+		background: url("../../../deploy/img/redcoats2.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+#imgg4 {
+	.whattosee-image {
+		background: url("../../../deploy/img/civilwar.jpg") no-repeat;
+		background-size: cover;
+	}
+}
+
+#imgg5 {
+	.whattosee-image {
+		background: url("../../../deploy/img/soldiersrun.jpg") no-repeat;
+		background-size: cover;
+	}
+}
+
+#imgg6 {
+	.whattosee-image {
+		background: url("../../../deploy/img/blueplane.jpg") no-repeat;
+		background-size: cover;
+	}	
+}
+
+

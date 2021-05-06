@@ -1,0 +1,66 @@
+.aboutus{
+    width: 100%;
+    ul {
+       display: grid;
+    }
+
+    button {
+		background: $royalred;
+		border: none;
+		padding: 5px;
+		margin: 5px;
+      height: 40px;
+      width: 150px;
+	}
+
+    .img1 {
+        background: url("../../../deploy/img/aboutussalute.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 600px;
+        background-position: center;
+
+     }
+     .img2 {
+        background: url("../../../deploy/img/DMHEFlogo.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100px;
+        background-position: center;
+     }
+
+     .img3 {
+        background: url("../../../deploy/img/ANGlog.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100px;
+        background-position: center;
+     }
+
+     @include sm {
+      .img2 {
+          background: url("../../../deploy/img/DMHEFlogo.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100px;
+          width: 100px;
+          background-position: center;
+        }
+  
+        .img3 {
+          background: url("../../../deploy/img/ANGlog.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100px;
+          width: 100px;
+          background-position: center;
+        }
+    }
+
+
+    
+}
+     

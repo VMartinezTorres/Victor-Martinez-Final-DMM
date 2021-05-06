@@ -1,0 +1,18 @@
+.virtualmuseum {
+    background: url("../../../deploy/img/jetplanes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+
+    h1 {
+        color: $lightopenskyblue;
+    }
+
+    p {
+        color: $lightopenskyblue;
+    }
+
+    .link {
+        color: $lightopenskyblue;
+    }
+}

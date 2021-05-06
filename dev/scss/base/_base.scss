@@ -1,0 +1,147 @@
+/* =============
+    Base
+============= */
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+main {
+	display: grid;
+	grid-template-areas:
+		"header"
+		"hero"
+		"aboutus"
+		"admission"
+		"whattosee"
+		"virtualmuseum"
+		"programs"
+		"education"
+		"footer";
+}
+
+.header {
+	grid-area: header;
+}
+
+.hero {
+    grid-area: hero;
+
+    ul {
+      display: grid;
+    }
+}
+
+
+.aboutus {
+    grid-area: aboutus;
+
+    ul {
+        display: grid;
+    }
+
+    @include md{
+        ul {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+        .img1 {
+            grid-column: span 2;
+            grid-row: 1 / 2;
+        }
+        .img2 {
+            grid-column: span 2;
+            grid-row: 1 / 2;
+        }
+		.img3 {
+            grid-column: span 2;
+            grid-row: 1 / 2;
+        }
+    }
+    
+	@include lg{
+		.img1 {
+            grid-column: span 2;
+            grid-row: 1 / 2;
+        }
+        .img2 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+		.img3 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    }
+  }
+
+.admission {
+	grid-area: admission;
+}
+
+.whattosee {
+	grid-area: whattosee;
+
+	ul {
+		display: grid;
+		
+		@include md {
+			ul {
+				grid-template-columns: repeat(4, 1fr);
+				grid-gap: 30px;
+				justify-content: center;
+				grid-template-areas:
+				"imgg1 imgg1 imgg2 imgg2"
+				"imgg3 imgg3 imgg4 imgg4"
+				"imgg5 imgg5 imgg6 imgg6";
+			}
+		}
+	
+		@include lg {
+			ul {
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-areas:
+				"imgg1 imgg1 imgg2 imgg2"
+				"imgg3 imgg3 imgg4 imgg4"
+				"imgg5 imgg5 imgg6 imgg6";
+			}
+					
+		}
+	}
+
+}
+
+.virtualmuseum {
+	grid-area: virtualmuseum;
+}
+
+.programs {
+	grid-area: programs;
+}
+
+.education {
+	grid-area: education;
+
+	ul{
+		display: grid;
+	}
+}
+
+.footer {
+	grid-area: footer;
+
+	.socials ul {
+		display: flex;
+	}
+
+
+}

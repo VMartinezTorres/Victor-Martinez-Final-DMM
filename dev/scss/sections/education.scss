@@ -1,0 +1,44 @@
+/* =============
+    education
+============= */
+.education-image {
+	background-size: cover;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	//width: 500px;
+	height: 300px;
+	padding: 20px;
+
+    button {
+		background: $royalred;
+		border: none;
+		padding: 5px;
+		margin: 10px;
+        width: 200px;
+	}
+
+    #imgg1 {
+        .education-image {
+            background: url("../../../deploy/img/schoolbus.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+    }
+    
+    #imgg2 {
+        .education-image {
+            background: url("../../../deploy/img/bus.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    #imgg3 {
+        .education-image {
+            background: url("../../../deploy/img/pencil.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

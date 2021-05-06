@@ -1,0 +1,21 @@
+/* =============
+    Header
+============= */
+
+header{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+
+	background: $delawareblue;
+    padding: 10px;
+
+    
+   h2 {
+        color: $lightopenskyblue;
+    }
+
+    >div{
+        grid-area: header;
+    }
+}

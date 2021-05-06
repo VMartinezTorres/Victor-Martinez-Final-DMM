@@ -1,0 +1,44 @@
+/* =============
+    programs
+============= */
+.programs-image {
+	background-size: cover;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	//width: 500px;
+	height: 300px;
+	padding: 20px;
+
+    #imgg1 {
+        .programs-image {
+            background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+    }
+    
+    #imgg2 {
+        .programs-image {
+            background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    #imgg3 {
+        .programs-image {
+            background: url("../../../deploy/img/vietnam.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+button {
+    background: $royalred;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+}
