@@ -389,8 +389,8 @@ main {
 }
 @media (min-width: 768px) {
   .aboutus ul {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
   .aboutus .img1 {
     grid-column: span 2;
@@ -398,7 +398,7 @@ main {
   }
   .aboutus .img2 {
     grid-column: span 2;
-    grid-row: 1/2;
+    grid-row: 2/2;
   }
   .aboutus .img3 {
     grid-column: span 2;
@@ -431,17 +431,35 @@ main {
   display: grid;
 }
 @media (min-width: 768px) {
-  .whattosee ul ul {
-    grid-template-columns: repeat(4, 1fr);
+  .whattosee ul {
+    grid-template-columns: repeat(2, 200px);
     grid-gap: 30px;
     justify-content: center;
     grid-template-areas: "imgg1 imgg1 imgg2 imgg2" "imgg3 imgg3 imgg4 imgg4" "imgg5 imgg5 imgg6 imgg6";
   }
+  .whattosee #imgg1 {
+    grid-area: imgg1;
+  }
+  .whattosee #imgg2 {
+    grid-area: imgg2;
+  }
+  .whattosee #imgg3 {
+    grid-area: imgg3;
+  }
+  .whattosee #imgg4 {
+    grid-area: imgg4;
+  }
+  .whattosee #imgg5 {
+    grid-area: imgg5;
+  }
+  .whattosee #imgg6 {
+    grid-area: imgg6;
+  }
 }
 @media (min-width: 1024px) {
-  .whattosee ul ul {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "imgg1 imgg1 imgg2 imgg2" "imgg3 imgg3 imgg4 imgg4" "imgg5 imgg5 imgg6 imgg6";
+  .whattosee ul {
+    grid-template-columns: 300px 300px;
+    grid-template-areas: "imgg1 imgg2" "imgg3 imgg4" "imgg5 imgg6";
   }
 }
 
@@ -452,12 +470,61 @@ main {
 .programs {
   grid-area: programs;
 }
+.programs ul {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .programs ul {
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 30px;
+    justify-content: center;
+    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+  }
+  .programs #imgg1 {
+    grid-area: imgg1;
+  }
+  .programs #imgg2 {
+    grid-area: imgg2;
+  }
+  .programs #imgg3 {
+    grid-area: imgg3;
+  }
+}
+@media (min-width: 1024px) {
+  .programs ul {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+  }
+}
 
 .education {
   grid-area: education;
 }
 .education ul {
   display: grid;
+}
+@media (min-width: 768px) {
+  .education ul {
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 30px;
+    justify-content: center;
+    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+  }
+  .education #imgg1 {
+    grid-area: imgg1;
+  }
+  .education #imgg2 {
+    grid-area: imgg2;
+  }
+  .education #imgg3 {
+    grid-area: imgg3;
+  }
+}
+@media (min-width: 1024px) {
+  .education ul {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+  }
 }
 
 .footer {
