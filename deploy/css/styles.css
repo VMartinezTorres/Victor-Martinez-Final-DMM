@@ -458,8 +458,14 @@ main {
 }
 @media (min-width: 1024px) {
   .whattosee ul {
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 450px 450px;
     grid-template-areas: "imgg1 imgg2" "imgg3 imgg4" "imgg5 imgg6";
+  }
+}
+@media (min-width: 1200px) {
+  .whattosee ul {
+    grid-template-columns: 450px 450px 450px;
+    grid-template-areas: "imgg1 imgg3 imgg5" "imgg2 imgg4 imgg6";
   }
 }
 
@@ -503,9 +509,9 @@ main {
 .education ul {
   display: grid;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .education ul {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 450px);
     grid-gap: 30px;
     justify-content: center;
     grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
@@ -520,7 +526,7 @@ main {
     grid-area: imgg3;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .education ul {
     grid-template-columns: repeat(3, 200px);
     grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
@@ -537,6 +543,23 @@ main {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Roboto Slab";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Questrial";
+  margin: 5px;
+  padding: 0;
+}
+
+p {
+  font-family: "Roboto Slab";
+  font-size: 16;
+  margin: 0;
+  padding: 5px;
+}
+
 /* =============
     Buttons
 ============= */
