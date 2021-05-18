@@ -389,20 +389,23 @@ main {
 }
 @media (min-width: 768px) {
   .aboutus ul {
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 400px);
   }
   .aboutus .img1 {
-    grid-column: span 2;
+    grid-column: 1/3;
     grid-row: 1/2;
+  }
+  .aboutus .details1 {
+    grid-column: 4/4;
   }
   .aboutus .img2 {
-    grid-column: span 2;
-    grid-row: 2/2;
+    grid-column: 2/3;
+    grid-row: 2/3;
   }
   .aboutus .img3 {
-    grid-column: span 2;
-    grid-row: 1/2;
+    grid-column: 4;
+    grid-row: 4;
   }
 }
 @media (min-width: 1024px) {
@@ -509,6 +512,14 @@ main {
 .education ul {
   display: grid;
 }
+@media (min-width: 768px) {
+  .education ul {
+    grid-template-columns: repeat(3, 450px);
+    grid-gap: 20px;
+    justify-content: center;
+    grid-template-areas: "imgg imgg2 imgg3";
+  }
+}
 @media (min-width: 1024px) {
   .education ul {
     grid-template-columns: repeat(3, 450px);
@@ -529,6 +540,8 @@ main {
 @media (min-width: 1200px) {
   .education ul {
     grid-template-columns: repeat(3, 200px);
+    grid-gap: 30px;
+    justify-content: center;
     grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
   }
 }
@@ -538,6 +551,35 @@ main {
 }
 .footer .socials ul {
   display: flex;
+}
+.footer .place section ul li {
+  display: grid;
+  grid-template-columns: 20px 200px;
+  grid-template-areas: "contact" "socials" "place";
+}
+.footer .socials ul {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "place place contact socials";
+  }
+  .footer .locations {
+    grid-area: place;
+  }
+  .footer .newsletter {
+    grid-area: contact;
+  }
+  .footer .socials {
+    grid-area: socials;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    grid-template-areas: "place contact socials";
+  }
 }
 
 /* =============
@@ -599,13 +641,6 @@ header > div {
 .footer .social-icon a {
   color: white;
   padding: 0 5px 0 0;
-}
-
-.socials {
-  background: url("../../../deploy/img/instagram-square-brands copy.png");
-  background: url("../../../deploy/img/twitter-square-brands copy.png");
-  background: url("../../../deploy/img/youtube-square-brands copy.png");
-  background: url("../../../deploy/img/facebook-square-brands copy.png");
 }
 
 .aboutus {
@@ -750,13 +785,6 @@ header > div {
   grid-template-rows: repeat(6, 1fr);
   height: 300px;
   padding: 20px;
-}
-.education-image button {
-  background: #B74554;
-  border: none;
-  padding: 5px;
-  margin: 10px;
-  width: 200px;
 }
 .education-image #imgg1 .education-image {
   background: url("../../../deploy/img/schoolbus.jpg") no-repeat;
