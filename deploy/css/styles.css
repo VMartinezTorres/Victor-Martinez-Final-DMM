@@ -387,39 +387,32 @@ main {
 .aboutus ul {
   display: grid;
 }
+.aboutus li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 @media (min-width: 768px) {
   .aboutus ul {
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px;
   }
-  .aboutus .img1 {
-    grid-column: 1/3;
-    grid-row: 1/2;
+  .aboutus ul li {
+    grid-column: span 4;
   }
-  .aboutus .details1 {
-    grid-column: 4/4;
-  }
-  .aboutus .img2 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .aboutus .img3 {
-    grid-column: 4;
-    grid-row: 4;
+  .aboutus ul .logos {
+    display: flex;
   }
 }
 @media (min-width: 1024px) {
-  .aboutus .img1 {
-    grid-column: span 2;
-    grid-row: 1/2;
+  .aboutus ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px;
   }
-  .aboutus .img2 {
-    grid-column: span 2;
-    grid-row: span 2;
+  .aboutus ul li {
+    grid-column: span 4;
   }
-  .aboutus .img3 {
-    grid-column: span 2;
-    grid-row: span 2;
+  .aboutus ul .logos {
+    display: flex;
   }
 }
 
@@ -514,35 +507,23 @@ main {
 }
 @media (min-width: 768px) {
   .education ul {
-    grid-template-columns: repeat(3, 450px);
+    grid-template-columns: 400px 400px 400px;
     grid-gap: 20px;
     justify-content: center;
-    grid-template-areas: "imgg imgg2 imgg3";
   }
 }
 @media (min-width: 1024px) {
   .education ul {
-    grid-template-columns: repeat(3, 450px);
+    grid-template-columns: 400px 400px 400px;
     grid-gap: 30px;
     justify-content: center;
-    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
-  }
-  .education #imgg1 {
-    grid-area: imgg1;
-  }
-  .education #imgg2 {
-    grid-area: imgg2;
-  }
-  .education #imgg3 {
-    grid-area: imgg3;
   }
 }
 @media (min-width: 1200px) {
   .education ul {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: 400px 400px 400px;
     grid-gap: 30px;
     justify-content: center;
-    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
   }
 }
 
@@ -645,6 +626,9 @@ header > div {
 
 .aboutus {
   width: 100%;
+  margin-top: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 .aboutus ul {
   display: grid;
@@ -662,7 +646,6 @@ header > div {
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
-  width: 600px;
   background-position: center;
 }
 .aboutus .img2 {
@@ -689,6 +672,7 @@ header > div {
     height: 100px;
     width: 100px;
     background-position: center;
+    display: none;
   }
   .aboutus .img3 {
     background: url("../../../deploy/img/ANGlog.jpg");
@@ -697,6 +681,7 @@ header > div {
     height: 100px;
     width: 100px;
     background-position: center;
+    display: none;
   }
 }
 
@@ -786,18 +771,21 @@ header > div {
   height: 300px;
   padding: 20px;
 }
-.education-image #imgg1 .education-image {
-  background: url("../../../deploy/img/schoolbus.jpg") no-repeat;
+
+#imgg1 .education-image {
+  background: url("/deploy/img/schoolbus.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
-.education-image #imgg2 .education-image {
-  background: url("../../../deploy/img/bus.jpg") no-repeat;
+
+#imgg2 .education-image {
+  background: url("/../../../deploy/img/bus.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
-.education-image #imgg3 .education-image {
-  background: url("../../../deploy/img/pencil.jpg") no-repeat;
+
+#imgg3 .education-image {
+  background: url("/../../../deploy/img/pencil.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -832,7 +820,7 @@ button {
   background: #B74554;
   border: none;
   padding: 5px;
-  margin: 10px;
+  margin: 10px auto;
   width: 200px;
 }
 
