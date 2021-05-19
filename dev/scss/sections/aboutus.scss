@@ -42,30 +42,5 @@
         width: 100px;
         background-position: center;
      }
-
-     @include sm {
-      .img2 {
-          background: url("../../../deploy/img/DMHEFlogo.jpg");
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 100px;
-          width: 100px;
-          background-position: center;
-          display: none;
-        }
-  
-        .img3 {
-          background: url("../../../deploy/img/ANGlog.jpg");
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 100px;
-          width: 100px;
-          background-position: center;
-          display: none;
-        }
-    }
-
-
     
 }
-     

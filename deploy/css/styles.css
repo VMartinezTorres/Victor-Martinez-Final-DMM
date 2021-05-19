@@ -372,13 +372,19 @@ main {
 
 .header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: 80px 400px;
+  grid-template-areas: "imgg1 DMM";
+}
+.header .img {
+  grid-area: imgg1;
+}
+.header .DMM {
+  grid-area: DMM;
 }
 
 .hero {
   grid-area: hero;
-}
-.hero ul {
-  display: grid;
 }
 
 .aboutus {
@@ -394,7 +400,7 @@ main {
 @media (min-width: 768px) {
   .aboutus ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 500px 500px;
+    grid-template-rows: 450px 200px;
   }
   .aboutus ul li {
     grid-column: span 4;
@@ -406,7 +412,7 @@ main {
 @media (min-width: 1024px) {
   .aboutus ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 500px 500px;
+    grid-template-rows: 450px 200px;
   }
   .aboutus ul li {
     grid-column: span 4;
@@ -431,37 +437,37 @@ main {
     grid-template-columns: repeat(2, 200px);
     grid-gap: 30px;
     justify-content: center;
-    grid-template-areas: "imgg1 imgg1 imgg2 imgg2" "imgg3 imgg3 imgg4 imgg4" "imgg5 imgg5 imgg6 imgg6";
+    grid-template-areas: "wts1 wts1 wts2 wts2" "wts3 wts3 wts4 wts4" "wts5 wts5 wts6 wts6";
   }
-  .whattosee #imgg1 {
-    grid-area: imgg1;
+  .whattosee #wts1 {
+    grid-area: wts1;
   }
-  .whattosee #imgg2 {
-    grid-area: imgg2;
+  .whattosee #wts2 {
+    grid-area: wts2;
   }
-  .whattosee #imgg3 {
-    grid-area: imgg3;
+  .whattosee #wts3 {
+    grid-area: wts3;
   }
-  .whattosee #imgg4 {
-    grid-area: imgg4;
+  .whattosee #wts4 {
+    grid-area: wts4;
   }
-  .whattosee #imgg5 {
-    grid-area: imgg5;
+  .whattosee #wts5 {
+    grid-area: wts5;
   }
-  .whattosee #imgg6 {
-    grid-area: imgg6;
+  .whattosee #wts6 {
+    grid-area: wts6;
   }
 }
 @media (min-width: 1024px) {
   .whattosee ul {
     grid-template-columns: 450px 450px;
-    grid-template-areas: "imgg1 imgg2" "imgg3 imgg4" "imgg5 imgg6";
+    grid-template-areas: "wts1 wts2" "wts3 wts4" "wts5 wts6";
   }
 }
 @media (min-width: 1200px) {
   .whattosee ul {
     grid-template-columns: 450px 450px 450px;
-    grid-template-areas: "imgg1 imgg3 imgg5" "imgg2 imgg4 imgg6";
+    grid-template-areas: "wts1 wts3 wts5" "wts2 wts4 wts6";
   }
 }
 
@@ -664,26 +670,6 @@ header > div {
   width: 100px;
   background-position: center;
 }
-@media (min-width: 576px) {
-  .aboutus .img2 {
-    background: url("../../../deploy/img/DMHEFlogo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: 100px;
-    background-position: center;
-    display: none;
-  }
-  .aboutus .img3 {
-    background: url("../../../deploy/img/ANGlog.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: 100px;
-    background-position: center;
-    display: none;
-  }
-}
 
 .hero {
   background: url("../../../deploy/img/Herojets.jpg");
@@ -728,35 +714,35 @@ header > div {
   background-color: #B74554;
 }
 
-#imgg1 .whattosee-image {
+#wts1 .whattosee-image {
   background: url("../../../deploy/img/redcoats1.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#imgg2 .whattosee-image {
+#wts2 .whattosee-image {
   background: url("../../../deploy/img/iwojima.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#imgg3 .whattosee-image {
+#wts3 .whattosee-image {
   background: url("../../../deploy/img/redcoats2.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#imgg4 .whattosee-image {
+#wts4 .whattosee-image {
   background: url("../../../deploy/img/civilwar.jpg") no-repeat;
   background-size: cover;
 }
 
-#imgg5 .whattosee-image {
+#wts5 .whattosee-image {
   background: url("../../../deploy/img/soldiersrun.jpg") no-repeat;
   background-size: cover;
 }
 
-#imgg6 .whattosee-image {
+#wts6 .whattosee-image {
   background: url("../../../deploy/img/blueplane.jpg") no-repeat;
   background-size: cover;
 }
