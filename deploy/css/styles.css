@@ -386,6 +386,13 @@ main {
 .hero {
   grid-area: hero;
 }
+.hero ul {
+  display: grid;
+}
+.hero li {
+  display: grid;
+  grid-template-rows: repeat(3, 130px);
+}
 
 .aboutus {
   grid-area: aboutus;
@@ -421,6 +428,10 @@ main {
 
 .admission {
   grid-area: admission;
+}
+.admission .admission {
+  display: flex;
+  justify-content: center;
 }
 
 .whattosee {
@@ -490,28 +501,66 @@ main {
   .programs ul {
     grid-gap: 10px;
     justify-content: center;
-    grid-template-columns: 500px 500px;
+    grid-template-columns: repeat(7, 150px);
+    grid-template-rows: repeat(6, 107px);
     grid-template-areas: "pro2 protext1" "protext2 pro3";
   }
   .programs #protext1 {
     grid-area: protext1;
-    display: flex;
-    justify-content: right;
+    grid-column: 5/5;
+    grid-row: 2/2;
   }
   .programs #protext2 {
     grid-area: protext2;
+    grid-column: 2/2;
+    grid-row: 5/5;
   }
   .programs #pro2 {
     grid-area: pro2;
+    padding-left: 15px;
   }
   .programs #pro3 {
     grid-area: pro3;
+    grid-column: 4/4;
+    grid-row: 4/7;
+    padding-left: 15px;
   }
 }
 @media (min-width: 1024px) {
   .programs ul {
-    grid-template-columns: repeat(3, 200px);
-    grid-template-areas: "pro1 pro1 pro2 pro2 pro3 pro3";
+    justify-content: center;
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: 350px;
+    grid-template-areas: "pro2 pro3" "protext1 protext2";
+  }
+  .programs #pro1 {
+    grid-area: protext1;
+    grid-column: 1/2;
+    grid-row: 1/1;
+    padding-left: 50px;
+  }
+  .programs #protext1 {
+    grid-area: protext1;
+    grid-column: 2/3;
+    grid-row: 4/4;
+    padding-left: 50px;
+  }
+  .programs #protext2 {
+    grid-area: protext2;
+    grid-column: 3/4;
+    grid-row: 4/4;
+  }
+  .programs #pro2 {
+    grid-area: pro2;
+    grid-column: 2/3;
+    grid-row: 1/1;
+    padding-left: 30px;
+  }
+  .programs #pro3 {
+    grid-area: pro3;
+    grid-column: 3/4;
+    grid-row: 1/1;
+    padding-right: 30px;
   }
 }
 
@@ -521,10 +570,26 @@ main {
 .education ul {
   display: grid;
 }
+.education .ed3 {
+  display: flex;
+  justify-content: center;
+}
 @media (min-width: 768px) {
   .education ul {
     grid-template-columns: 400px 400px 400px;
     grid-gap: 20px;
+    justify-content: center;
+  }
+  .education ul .ed1 {
+    display: flex;
+    justify-content: center;
+  }
+  .education ul .ed2 {
+    display: flex;
+    justify-content: center;
+  }
+  .education ul .ed3 {
+    display: flex;
     justify-content: center;
   }
 }
@@ -685,12 +750,11 @@ header > div {
   background: url("../../../deploy/img/Herojets.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
 }
 .hero ul li {
   display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". hero .";
+  grid-template-areas: "hero";
 }
 .hero ul li a {
   grid-area: hero;
@@ -702,7 +766,8 @@ header > div {
 
 .admission {
   background-color: #0A183F;
-  height: 100px;
+  height: 60px;
+  padding: 10px;
 }
 .admission h1 {
   color: #D6E7FF;
@@ -718,6 +783,11 @@ header > div {
   width: 380px;
   height: 200px;
   padding: 20px;
+}
+
+.whattosee {
+  margin: 16px;
+  padding-top: 20px;
 }
 
 .new-content h2 {
@@ -807,6 +877,14 @@ header > div {
   padding: 20px;
 }
 
+.ed1 {
+  display: none;
+}
+
+.ed2 {
+  display: none;
+}
+
 #imgg1 .education-image {
   background: url("/deploy/img/schoolbus.jpg") no-repeat;
   background-size: cover;
@@ -841,6 +919,14 @@ header > div {
     background-position: center;
     display: block;
   }
+
+  .ed1 {
+    display: block;
+  }
+
+  .ed2 {
+    display: block;
+  }
 }
 /* =============
     programs
@@ -849,7 +935,6 @@ header > div {
   background-size: cover;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  width: 350px;
   height: 300px;
   padding: 20px;
 }
@@ -858,6 +943,14 @@ header > div {
   background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+#protext1 {
+  display: none;
+}
+
+#protext2 {
+  display: none;
 }
 
 #pro2 {
@@ -887,6 +980,14 @@ button {
 }
 
 @media (min-width: 768px) {
+  #protext1 {
+    display: block;
+  }
+
+  #protext2 {
+    display: block;
+  }
+
   #pro1 {
     display: none;
   }
@@ -903,6 +1004,7 @@ button {
     background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    width: 400px;
   }
 
   #pro3 {
@@ -912,6 +1014,7 @@ button {
     background: url("../../../deploy/img/vietnam.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    width: 400px;
   }
 }
 @media (min-width: 1024px) {
@@ -922,6 +1025,7 @@ button {
     background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    width: 35v0px;
   }
 
   #pro2 {
@@ -931,6 +1035,7 @@ button {
     background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    width: 350px;
   }
 
   #pro3 {
@@ -940,6 +1045,7 @@ button {
     background: url("../../../deploy/img/vietnam.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    width: 350px;
   }
 }
 .virtualmuseum {

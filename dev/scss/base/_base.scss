@@ -47,6 +47,16 @@ main {
 
 .hero {
     grid-area: hero;
+
+	ul {
+		display: grid;
+	}
+
+	li {
+		display: grid;
+		grid-template-rows: repeat(3, 130px);
+		
+	}
 }
 
 
@@ -92,6 +102,11 @@ main {
 
 .admission {
 	grid-area: admission;
+
+	.admission {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .whattosee {
@@ -153,11 +168,13 @@ main {
 				grid-template-areas:
 				"wts1 wts3 wts5"
 				"wts2 wts4 wts6";
+
+				}
 			}
 					
 		}
 
-}
+
 
 
 
@@ -189,7 +206,8 @@ main {
 			ul {
 				grid-gap: 10px;
 				justify-content: center;
-				grid-template-columns: 500px 500px;
+				grid-template-columns: repeat(7, 150px);
+				grid-template-rows: repeat(6, 107px);
 				grid-template-areas:
 				"pro2 protext1" 
 				 "protext2 pro3";
@@ -197,19 +215,27 @@ main {
 
 			#protext1 {
 				grid-area: protext1;
-				display: flex;
-				justify-content: right;
+				grid-column: 5 / 5;
+				grid-row: 2 / 2;
+
 			}
 			#protext2 {
 				grid-area: protext2;
+				grid-column: 2 / 2;
+				grid-row: 5 / 5;
+
 			}
 
 			#pro2 {
 				grid-area: pro2;
+				padding-left: 15px;
 			}
 			
 			#pro3 {
 				grid-area: pro3;
+				grid-column: 4 / 4;
+				grid-row: 4 / 7;
+				padding-left: 15px;
 			}
 
 			
@@ -217,10 +243,51 @@ main {
 	
 		@include lg {
 			ul {
-				grid-template-columns: repeat(3,200px);
+				justify-content: center;
+				grid-template-columns: repeat(3, 450px);
+				grid-template-rows: 350px;
 				grid-template-areas:
-				"pro1 pro1 pro2 pro2 pro3 pro3";
+				"pro2 pro3" 
+				 "protext1 protext2";
+				
 			}
+
+			#pro1 {
+				grid-area: protext1;
+				grid-column: 1 / 2;
+				grid-row: 1 / 1;
+				padding-left: 50px;
+				
+			}
+
+			#protext1 {
+				grid-area: protext1;
+				grid-column: 2 / 3;
+				grid-row: 4 / 4;
+				padding-left: 50px;
+			}
+			#protext2 {
+				grid-area: protext2;
+				grid-column: 3 / 4;
+				grid-row: 4 / 4;
+			}
+
+			#pro2 {
+				grid-area: pro2;
+				grid-column: 2 / 3;
+				grid-row: 1 / 1;
+				padding-left: 30px;
+				
+			}
+			
+			#pro3 {
+				grid-area: pro3;
+				grid-column: 3 / 4;
+				grid-row: 1 / 1;
+				padding-right: 30px;
+			
+			}
+
 					
 		}
 
@@ -234,11 +301,30 @@ main {
 
 	}
 
+	.ed3 {
+		display: flex;
+		justify-content: center;
+	}
+
 		@include md {
 			ul {
 	 			grid-template-columns: 400px 400px 400px;
 				grid-gap: 20px;
 				justify-content: center;
+
+				.ed1 {
+					display: flex;
+					justify-content: center;
+				}
+
+				.ed2 {
+					display: flex;
+					justify-content: center;
+				}
+				.ed3 {
+					display: flex;
+					justify-content: center;
+				}
 			}
 		}
 

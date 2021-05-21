@@ -11,6 +11,13 @@
 
 }
 
+.ed1 {
+    display: none;
+}
+.ed2 {
+    display: none;
+}
+
 #imgg1 {
     .education-image {
         background: url("/deploy/img/schoolbus.jpg") no-repeat;
@@ -58,6 +65,13 @@
             display: block;
            
         }
+    }
+
+    .ed1 {
+        display: block;
+    }
+    .ed2 {
+        display: block;
     }
 }
 

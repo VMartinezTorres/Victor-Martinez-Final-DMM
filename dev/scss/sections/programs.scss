@@ -5,7 +5,6 @@
 	background-size: cover;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
-	width: 350px;
 	height: 300px;
 	padding: 20px;
 }
@@ -17,6 +16,13 @@
         background-position: center;
         
     }
+}
+
+#protext1 {
+    display: none;
+}
+#protext2 {
+    display: none;
 }
 
 #pro2 {
@@ -47,6 +53,12 @@ button {
 
 @include md {
    
+    #protext1 {
+        display: block;
+    }
+    #protext2 {
+        display: block;
+    }
     #pro1 {
         display: none;
         .programs-image {
@@ -63,6 +75,7 @@ button {
             background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
             background-size: cover;
             background-position: center;
+            width: 400px;
         }
     }
     
@@ -72,6 +85,7 @@ button {
             background: url("../../../deploy/img/vietnam.jpg") no-repeat;
             background-size: cover;
             background-position: center;
+            width: 400px;
         }
     }
 }
@@ -83,6 +97,7 @@ button {
             background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
             background-size: cover;
             background-position: center;
+            width: 35v0px;
             
         }
     }
@@ -93,6 +108,7 @@ button {
             background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
             background-size: cover;
             background-position: center;
+            width: 350px;
         }
     }
     
@@ -102,6 +118,8 @@ button {
             background: url("../../../deploy/img/vietnam.jpg") no-repeat;
             background-size: cover;
             background-position: center;
+            width: 350px;
+
 
         }
     }

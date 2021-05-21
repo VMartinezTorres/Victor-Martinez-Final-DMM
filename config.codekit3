@@ -133,6 +133,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/hs2.jpg" : {
+      "ft" : 16384,
+      "iS" : 108108,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/hs2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/instagram-square-brands copy.png" : {
       "ft" : 32768,
       "iS" : 748,
@@ -295,6 +308,19 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/img\/vietnam.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/vm2.jpg" : {
+      "ft" : 16384,
+      "iS" : 106712,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/vm2.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
