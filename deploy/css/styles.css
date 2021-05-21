@@ -396,14 +396,15 @@ main {
 .aboutus li {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 @media (min-width: 768px) {
   .aboutus ul {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 450px 200px;
   }
   .aboutus ul li {
-    grid-column: span 4;
+    grid-column: 2/8;
   }
   .aboutus ul .logos {
     display: flex;
@@ -411,11 +412,7 @@ main {
 }
 @media (min-width: 1024px) {
   .aboutus ul {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 450px 200px;
-  }
-  .aboutus ul li {
-    grid-column: span 4;
   }
   .aboutus ul .logos {
     display: flex;
@@ -478,30 +475,43 @@ main {
 .programs {
   grid-area: programs;
 }
+.programs .button {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-areas: ". button .";
+}
+.programs .button .button {
+  grid-area: imgg1;
+}
 .programs ul {
   display: grid;
 }
 @media (min-width: 768px) {
   .programs ul {
-    grid-template-columns: repeat(3, 200px);
-    grid-gap: 30px;
+    grid-gap: 10px;
     justify-content: center;
-    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+    grid-template-columns: 500px 500px;
+    grid-template-areas: "pro2 protext1" "protext2 pro3";
   }
-  .programs #imgg1 {
-    grid-area: imgg1;
+  .programs #protext1 {
+    grid-area: protext1;
+    display: flex;
+    justify-content: right;
   }
-  .programs #imgg2 {
-    grid-area: imgg2;
+  .programs #protext2 {
+    grid-area: protext2;
   }
-  .programs #imgg3 {
-    grid-area: imgg3;
+  .programs #pro2 {
+    grid-area: pro2;
+  }
+  .programs #pro3 {
+    grid-area: pro3;
   }
 }
 @media (min-width: 1024px) {
   .programs ul {
     grid-template-columns: repeat(3, 200px);
-    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+    grid-template-areas: "pro1 pro1 pro2 pro2 pro3 pro3";
   }
 }
 
@@ -705,6 +715,7 @@ header > div {
   background-size: cover;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  width: 380px;
   height: 200px;
   padding: 20px;
 }
@@ -712,6 +723,7 @@ header > div {
 .new-content h2 {
   color: #D6E7FF;
   background-color: #B74554;
+  width: 418px;
 }
 
 #wts1 .whattosee-image {
@@ -720,6 +732,9 @@ header > div {
   background-position: center;
 }
 
+#wts2 {
+  display: none;
+}
 #wts2 .whattosee-image {
   background: url("../../../deploy/img/iwojima.jpg") no-repeat;
   background-size: cover;
@@ -732,6 +747,9 @@ header > div {
   background-position: center;
 }
 
+#wts4 {
+  display: none;
+}
 #wts4 .whattosee-image {
   background: url("../../../deploy/img/civilwar.jpg") no-repeat;
   background-size: cover;
@@ -742,11 +760,41 @@ header > div {
   background-size: cover;
 }
 
+#wts6 {
+  display: none;
+}
 #wts6 .whattosee-image {
   background: url("../../../deploy/img/blueplane.jpg") no-repeat;
   background-size: cover;
 }
 
+@media (min-width: 768px) {
+  #wts2 {
+    display: block;
+  }
+  #wts2 .whattosee-image {
+    background: url("../../../deploy/img/iwojima.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #wts4 {
+    display: block;
+  }
+  #wts4 .whattosee-image {
+    background: url("../../../deploy/img/civilwar.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  #wts6 {
+    display: block;
+  }
+  #wts6 .whattosee-image {
+    background: url("../../../deploy/img/blueplane.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 /* =============
     education
 ============= */
@@ -755,6 +803,7 @@ header > div {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
   height: 300px;
+  width: 350px;
   padding: 20px;
 }
 
@@ -762,12 +811,14 @@ header > div {
   background: url("/deploy/img/schoolbus.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  display: none;
 }
 
 #imgg2 .education-image {
   background: url("/../../../deploy/img/bus.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  display: none;
 }
 
 #imgg3 .education-image {
@@ -776,6 +827,21 @@ header > div {
   background-position: center;
 }
 
+@media (min-width: 768px) {
+  #imgg1 .education-image {
+    background: url("/deploy/img/schoolbus.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+  }
+
+  #imgg2 .education-image {
+    background: url("/../../../deploy/img/bus.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+  }
+}
 /* =============
     programs
 ============= */
@@ -783,20 +849,30 @@ header > div {
   background-size: cover;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  width: 350px;
   height: 300px;
   padding: 20px;
 }
-.programs-image #imgg1 .programs-image {
+
+#pro1 .programs-image {
   background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
-.programs-image #imgg2 .programs-image {
+
+#pro2 {
+  display: none;
+}
+#pro2 .programs-image {
   background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
-.programs-image #imgg3 .programs-image {
+
+#pro3 {
+  display: none;
+}
+#pro3 .programs-image {
   background: url("../../../deploy/img/vietnam.jpg") no-repeat;
   background-size: cover;
   background-position: center;
@@ -806,10 +882,66 @@ button {
   background: #B74554;
   border: none;
   padding: 5px;
-  margin: 10px auto;
-  width: 200px;
+  margin: 20px auto;
+  width: 400px;
 }
 
+@media (min-width: 768px) {
+  #pro1 {
+    display: none;
+  }
+  #pro1 .programs-image {
+    background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pro2 {
+    display: block;
+  }
+  #pro2 .programs-image {
+    background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pro3 {
+    display: block;
+  }
+  #pro3 .programs-image {
+    background: url("../../../deploy/img/vietnam.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (min-width: 1024px) {
+  #pro1 {
+    display: block;
+  }
+  #pro1 .programs-image {
+    background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pro2 {
+    display: block;
+  }
+  #pro2 .programs-image {
+    background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pro3 {
+    display: block;
+  }
+  #pro3 .programs-image {
+    background: url("../../../deploy/img/vietnam.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 .virtualmuseum {
   background: url("../../../deploy/img/jetplanes.jpg");
   background-size: cover;

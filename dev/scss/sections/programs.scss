@@ -5,11 +5,50 @@
 	background-size: cover;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
-	//width: 500px;
+	width: 350px;
 	height: 300px;
 	padding: 20px;
+}
 
-    #imgg1 {
+#pro1 {
+    .programs-image {
+        background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+    }
+}
+
+#pro2 {
+    display: none;
+    .programs-image {
+        background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+#pro3 {
+    display: none;
+    .programs-image {
+        background: url("../../../deploy/img/vietnam.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+button {
+    background: $royalred;
+    border: none;
+    padding: 5px;
+    margin: 20px auto;
+    width: 400px;
+}
+
+@include md {
+   
+    #pro1 {
+        display: none;
         .programs-image {
             background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
             background-size: cover;
@@ -18,7 +57,8 @@
         }
     }
     
-    #imgg2 {
+    #pro2 {
+        display: block;
         .programs-image {
             background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
             background-size: cover;
@@ -26,7 +66,8 @@
         }
     }
     
-    #imgg3 {
+    #pro3 {
+        display: block;
         .programs-image {
             background: url("../../../deploy/img/vietnam.jpg") no-repeat;
             background-size: cover;
@@ -35,11 +76,34 @@
     }
 }
 
-button {
-    background: $royalred;
-    border: none;
-    padding: 5px;
-    margin: 10px auto;
-    width: 200px;
+@include lg {
+    #pro1 {
+         display: block;
+        .programs-image {
+            background: url("../../../deploy/img/oldhouse.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+    }
+    
+    #pro2 {
+         display: block;
+        .programs-image {
+            background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    
+    #pro3 {
+         display: block;
+        .programs-image {
+            background: url("../../../deploy/img/vietnam.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+    }
 }
 

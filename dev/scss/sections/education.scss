@@ -6,6 +6,7 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
 	height: 300px;
+    width: 350px;
 	padding: 20px;
 
 }
@@ -15,6 +16,7 @@
         background: url("/deploy/img/schoolbus.jpg") no-repeat;
         background-size: cover;
         background-position: center;
+        display: none;
     
     }
 }
@@ -24,6 +26,7 @@
         background: url("/../../../deploy/img/bus.jpg") no-repeat;
         background-size: cover;
         background-position: center;
+        display: none;
        
     }
 }
@@ -33,6 +36,28 @@
         background: url("/../../../deploy/img/pencil.jpg") no-repeat;
         background-size: cover;
         background-position: center;
+    }
+}
+
+@include md {
+    #imgg1 {
+        .education-image {
+            background: url("/deploy/img/schoolbus.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+        
+        }
+    }
+    
+    #imgg2 {
+        .education-image {
+            background: url("/../../../deploy/img/bus.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+           
+        }
     }
 }
 

@@ -5,6 +5,7 @@
 	background-size: cover;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
+	width: 380px;
 	height: 200px;
 	padding: 20px;
 }
@@ -13,6 +14,7 @@
 	h2 {
 		color: $lightopenskyblue;
 		background-color: $royalred;
+		width: 418px;
 	}
 }
 
@@ -25,6 +27,7 @@
 }
 
 #wts2 {
+	display: none;
 	.whattosee-image {
 		background: url("../../../deploy/img/iwojima.jpg") no-repeat;
 		background-size: cover;
@@ -41,9 +44,11 @@
 }
 
 #wts4 {
+	display: none;
 	.whattosee-image {
 		background: url("../../../deploy/img/civilwar.jpg") no-repeat;
 		background-size: cover;
+	
 	}
 }
 
@@ -55,10 +60,38 @@
 }
 
 #wts6 {
+	display: none;
 	.whattosee-image {
 		background: url("../../../deploy/img/blueplane.jpg") no-repeat;
 		background-size: cover;
 	}	
 }
 
+@include md{
+	#wts2 {
+		display: block;
+		.whattosee-image {
+			background: url("../../../deploy/img/iwojima.jpg") no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	#wts4 {
+		display: block;
+		.whattosee-image {
+			background: url("../../../deploy/img/civilwar.jpg") no-repeat;
+			background-size: cover;
+		
+		}
+	}
+	#wts6 {
+		display: block;
+		.whattosee-image {
+			background: url("../../../deploy/img/blueplane.jpg") no-repeat;
+			background-size: cover;
+			background-position: center;
+		}	
+	}
+
+}
 

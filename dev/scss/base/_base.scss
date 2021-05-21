@@ -60,15 +60,16 @@ main {
 	li {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
 	}
 
     @include md{
         ul {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns:repeat(8, 1fr);
             grid-template-rows: 450px 200px;
 
 			li {
-				grid-column: span 4;
+				grid-column: 2 / 8;
 			}
 
 			.logos {
@@ -80,12 +81,7 @@ main {
     
 	@include lg{
 		ul {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 450px 200px;
-
-			li {
-				grid-column: span 4;
-			}
 
 			.logos {
 				display: flex;
@@ -103,8 +99,7 @@ main {
 
 	ul {
 		display: grid;
-	}
-		
+	}	
 		@include md {
 			ul {
 				grid-template-columns: repeat(2,200px);
@@ -164,6 +159,8 @@ main {
 
 }
 
+
+
 .virtualmuseum {
 	grid-area: virtualmuseum;
 }
@@ -171,37 +168,58 @@ main {
 .programs {
 	grid-area: programs;
 
+	.button {
+		display: grid;
+		grid-template-columns: 400px 400px 400px;
+		grid-template-areas:
+		". button .";
+
+		.button {
+			grid-area: imgg1;
+		}
+	}
+
 	ul {
 		display: grid;
+		
 	}
+	
 		
 		@include md {
 			ul {
-				grid-template-columns: repeat(3,200px);
-				grid-gap: 30px;
+				grid-gap: 10px;
 				justify-content: center;
+				grid-template-columns: 500px 500px;
 				grid-template-areas:
-				"imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+				"pro2 protext1" 
+				 "protext2 pro3";
 			}
 
-			#imgg1 {
-				grid-area: imgg1;
+			#protext1 {
+				grid-area: protext1;
+				display: flex;
+				justify-content: right;
+			}
+			#protext2 {
+				grid-area: protext2;
 			}
 
-			#imgg2 {
-				grid-area: imgg2;
+			#pro2 {
+				grid-area: pro2;
 			}
 			
-			#imgg3 {
-				grid-area: imgg3;
+			#pro3 {
+				grid-area: pro3;
 			}
+
+			
 		}
 	
 		@include lg {
 			ul {
 				grid-template-columns: repeat(3,200px);
 				grid-template-areas:
-				"imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+				"pro1 pro1 pro2 pro2 pro3 pro3";
 			}
 					
 		}
