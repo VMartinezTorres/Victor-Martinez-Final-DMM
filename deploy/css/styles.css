@@ -391,7 +391,9 @@ main {
 }
 .hero li {
   display: grid;
-  grid-template-rows: repeat(3, 130px);
+  grid-template-rows: repeat(3, 165px);
+  grid-column: 1/1;
+  grid-row: 3/4;
 }
 
 .aboutus {
@@ -611,36 +613,35 @@ main {
 .footer {
   grid-area: footer;
 }
-.footer .socials ul {
-  display: flex;
-}
 .footer .place section ul li {
   display: grid;
   grid-template-columns: 20px 200px;
-  grid-template-areas: "contact" "socials" "place";
+  grid-template-areas: "contact" "socials" "museum";
 }
 .footer .socials ul {
-  display: flex;
+  display: grid;
 }
 @media (min-width: 768px) {
   .footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "place place contact socials";
+    grid-template-columns: repeat(7, 300px);
+    grid-template-rows: repeat(6, 50px);
+    grid-template-areas: "museum contact socials";
   }
-  .footer .locations {
-    grid-area: place;
+  .footer .museum {
+    grid-area: museum;
+    grid-column: 5/6;
+    grid-row: 6/7;
   }
-  .footer .newsletter {
+  .footer .contact {
     grid-area: contact;
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
   .footer .socials {
     grid-area: socials;
-  }
-}
-@media (min-width: 1024px) {
-  .footer {
-    grid-template-areas: "place contact socials";
+    grid-column: 5/6;
+    grid-row: 6/7;
   }
 }
 
@@ -754,7 +755,6 @@ header > div {
 }
 .hero ul li {
   display: grid;
-  grid-template-areas: "hero";
 }
 .hero ul li a {
   grid-area: hero;

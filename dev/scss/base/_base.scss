@@ -54,7 +54,10 @@ main {
 
 	li {
 		display: grid;
-		grid-template-rows: repeat(3, 130px);
+		grid-template-rows: repeat(3, 165px);
+
+		grid-column: 1 / 1;
+		grid-row: 3 / 4;
 		
 	}
 }
@@ -352,10 +355,6 @@ main {
 .footer {
 	grid-area: footer;
 
-	.socials ul {
-		display: flex;
-	}
-
 	.place {
         section ul li {
           display: grid;
@@ -363,36 +362,39 @@ main {
 		  grid-template-areas: 
 		  "contact"
 		  "socials"
-		  "place";
+		  "museum";
         }
       }
       
       .socials ul {
-        display: flex;
+        display: grid;
       }
 
 
       @include md {
         display: grid;
-       grid-template-columns: repeat(4, 1fr);
+       grid-template-columns: repeat(7, 300px);
+	   grid-template-rows: repeat(6, 50px);
         grid-template-areas: 
-        "place place contact socials";
+        "museum contact socials";
           
-          .locations {
-            grid-area: place;
+          .museum {
+            grid-area: museum;
+			grid-column: 5 / 6;
+			grid-row: 6 / 7;
           }
         
-          .newsletter {
+          .contact {
             grid-area: contact;
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
           }
         
           .socials {
             grid-area: socials;
+			grid-column: 5 / 6;
+			grid-row: 6 / 7;
           }
        }
         
-        @include lg {
-          grid-template-areas:
-          "place contact socials";
-        }
 }
