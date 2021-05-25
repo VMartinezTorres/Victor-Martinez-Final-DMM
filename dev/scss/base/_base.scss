@@ -48,6 +48,13 @@ main {
 .hero {
     grid-area: hero;
 
+	#detailhero {
+		margin: 400px 0px 0px 0px;
+		padding: 10px;
+		text-align: left;
+		position: absolute; 
+	}
+
 	ul {
 		display: grid;
 	}
@@ -183,10 +190,31 @@ main {
 
 .virtualmuseum {
 	grid-area: virtualmuseum;
+
+	#textvm {
+		margin: 50px 50px 24px 100px;
+		padding: 20px;
+		text-align: center;
+		vertical-align: middle;
+		position: absolute; 
+	}
+
+	@include md{
+		#textvm {
+			margin: 100px 100px 24px 400px;
+			padding: 20px;
+			text-align: center;
+			vertical-align: middle;
+			position: absolute; 
+		}
+	}
+
+	
 }
 
 .programs {
 	grid-area: programs;
+	padding: 20px;
 
 	.button {
 		display: grid;
