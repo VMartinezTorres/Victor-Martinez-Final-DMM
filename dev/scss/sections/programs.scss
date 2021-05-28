@@ -1,6 +1,11 @@
 /* =============
     programs
 ============= */
+.programs {
+    width: 100vw;
+    margin: 16px;
+    padding: 16px;
+}
 .programs-image {
 	background-size: cover;
 	grid-template-columns: repeat(12, 1fr);
@@ -76,6 +81,7 @@ button {
             background-size: cover;
             background-position: center;
             width: 400px;
+            padding-left: 30px;
         }
     }
     
