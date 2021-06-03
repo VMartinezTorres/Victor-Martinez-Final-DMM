@@ -7,15 +7,18 @@
         margin-bottom: 10px;
         text-align: center;
         display: none;
+        justify-content: left;
         
 
         @include md {
             align-items: center;
             display: flex;
+            justify-content: left;
         }
             @include lg {
                 align-items: center;
                 display: flex;
+                justify-content: left;
             }
 
             a:link,
