@@ -368,6 +368,7 @@ ul li {
 main {
   display: grid;
   grid-template-areas: "header" "hero" "aboutus" "admission" "whattosee" "virtualmuseum" "programs" "education" "footer";
+  width: 100vw;
 }
 
 .header {
@@ -635,6 +636,7 @@ main {
 
 .footer {
   grid-area: footer;
+  text-align: center;
 }
 .footer .place section ul li {
   display: grid;
@@ -646,25 +648,7 @@ main {
 }
 @media (min-width: 768px) {
   .footer {
-    display: grid;
-    grid-template-columns: repeat(7, 300px);
-    grid-template-rows: repeat(6, 50px);
-    grid-template-areas: "museum contact socials";
-  }
-  .footer .museum {
-    grid-area: museum;
-    grid-column: 5/6;
-    grid-row: 6/7;
-  }
-  .footer .contact {
-    grid-area: contact;
-    grid-column: 3/4;
-    grid-row: 2/3;
-  }
-  .footer .socials {
-    grid-area: socials;
-    grid-column: 5/6;
-    grid-row: 6/7;
+    display: flex;
   }
 }
 
@@ -697,6 +681,48 @@ p {
 /* =============
     Navigation
 ============= */
+#nav-container {
+  height: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  display: none;
+}
+@media (min-width: 768px) {
+  #nav-container {
+    align-items: center;
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  #nav-container {
+    align-items: center;
+    display: flex;
+  }
+}
+#nav-container a:link,
+#nav-container a:visited {
+  color: #fff;
+  font-family: "questrial";
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+@media (min-width: 1024px) {
+  #nav-container a:link,
+#nav-container a:visited {
+    margin: 10px;
+    color: #D6E7FF;
+  }
+}
+#nav-container a:link:hover, #nav-container a:link:active,
+#nav-container a:visited:hover,
+#nav-container a:visited:active {
+  color: #B74554;
+}
+#nav-container li:last-child {
+  border: none;
+}
+
 /* =============
     Header
 ============= */
@@ -706,6 +732,7 @@ header {
   grid-template-areas: ". header .";
   background: #0A183F;
   padding: 10px;
+  width: 100vw;
 }
 header h2 {
   color: #D6E7FF;
@@ -720,13 +747,16 @@ header > div {
 .footer {
   background-color: #0A183F;
   height: 300px;
+  width: 100vw;
+  justify-content: space-between;
 }
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
   color: #D6E7FF;
+  padding: 10px;
 }
 .footer .social-icon a {
   color: white;
-  padding: 0 5px 0 0;
+  padding: 10px;
 }
 
 .aboutus {
@@ -788,6 +818,7 @@ header > div {
 .hero h1 {
   color: #D6E7FF;
   padding: 20px;
+  width: fit-content;
 }
 
 .admission {
@@ -798,6 +829,7 @@ header > div {
 }
 .admission h1 {
   color: #D6E7FF;
+  text-align: center;
 }
 
 /* =============
@@ -898,6 +930,7 @@ header > div {
 ============= */
 .education {
   width: 100vw;
+  margin: 16px;
 }
 
 .education-image {
@@ -905,8 +938,10 @@ header > div {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
   height: 300px;
-  width: 350px;
+  width: 380px;
   padding: 20px;
+  margin: 16px;
+  margin: 0 auto;
 }
 
 .ed1 {
@@ -974,7 +1009,9 @@ header > div {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
   height: 300px;
+  width: 380px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 #pro1 .programs-image {
@@ -998,6 +1035,7 @@ header > div {
   background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  margin-left: 20px;
 }
 
 #pro3 {

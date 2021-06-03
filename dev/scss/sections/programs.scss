@@ -11,7 +11,9 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
 	height: 300px;
+    width: 380px;
 	padding: 20px;
+    margin: 0 auto;
 }
 
 #pro1 {
@@ -36,6 +38,7 @@
         background: url("../../../deploy/img/pearlharbor.jpg") no-repeat;
         background-size: cover;
         background-position: center;
+        margin-left: 20px;
     }
 }
 

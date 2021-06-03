@@ -3,14 +3,17 @@
 ============= */
 .education {
     width: 100vw;
+    margin: 16px;
 }
 .education-image {
 	background-size: cover;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
 	height: 300px;
-    width: 350px;
+    width: 380px;
 	padding: 20px;
+    margin: 16px;
+    margin: 0 auto;
 
 }
 

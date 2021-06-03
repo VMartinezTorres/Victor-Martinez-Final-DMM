@@ -1,3 +1,42 @@
 /* =============
     Navigation
 ============= */
+#nav-container {
+    
+        height: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        display: none;
+        
+
+        @include md {
+            align-items: center;
+            display: flex;
+        }
+            @include lg {
+                align-items: center;
+                display: flex;
+            }
+
+            a:link,
+            a:visited {
+                color: $white;
+                font-family: 'questrial';
+                padding: 0 20px;
+                text-decoration: none;
+                transition: 0.25s;
+                @include lg {
+                    margin: 10px;
+                    color: $lightopenskyblue;
+                }
+
+                &:hover,
+                &:active {
+                    color: $royalred;
+                }
+            }
+
+        li:last-child {
+            border: none;
+        }
+}

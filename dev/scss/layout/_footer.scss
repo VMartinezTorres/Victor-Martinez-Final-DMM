@@ -4,14 +4,17 @@
 .footer {
 	background-color: $delawareblue;
 	height: 300px;
+	width: 100vw;
+	justify-content: space-between;
 
 
 	h1,h2,h3,h4,h5,h6{
 		color: $lightopenskyblue;
+		padding: 10px;
 	}
 	
 	.social-icon a {
 		color: white;
-		padding: 0 5px 0 0;
+		padding: 10px
 	}
 }

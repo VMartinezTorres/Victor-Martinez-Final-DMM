@@ -27,6 +27,8 @@ main {
 		"programs"
 		"education"
 		"footer";
+
+		width: 100vw;
 }
 
 .header {
@@ -382,6 +384,7 @@ main {
 
 .footer {
 	grid-area: footer;
+	text-align: center;
 
 	.place {
         section ul li {
@@ -400,29 +403,9 @@ main {
 
 
       @include md {
-        display: grid;
-       grid-template-columns: repeat(7, 300px);
-	   grid-template-rows: repeat(6, 50px);
-        grid-template-areas: 
-        "museum contact socials";
-          
-          .museum {
-            grid-area: museum;
-			grid-column: 5 / 6;
-			grid-row: 6 / 7;
-          }
-        
-          .contact {
-            grid-area: contact;
-			grid-column: 3 / 4;
-			grid-row: 2 / 3;
-          }
-        
-          .socials {
-            grid-area: socials;
-			grid-column: 5 / 6;
-			grid-row: 6 / 7;
-          }
-       }
+        display: flex;
+		
+	
+		       }
         
 }
