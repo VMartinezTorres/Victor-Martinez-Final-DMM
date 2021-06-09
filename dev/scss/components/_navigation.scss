@@ -3,11 +3,18 @@
 ============= */
 #nav-container {
     
-        height: 100%;
-        margin-bottom: 10px;
-        text-align: center;
+        background-color: $delawareblue;
         display: none;
-        justify-content: left;
+        width: 100vw;
+        position: fixed;
+        top: 79px;
+        .nav-btns {
+            display: inline-block;
+            text-decoration: none;
+            margin: 0 auto;
+            color: white;
+            width: 100%;
+        }
         
 
         @include md {

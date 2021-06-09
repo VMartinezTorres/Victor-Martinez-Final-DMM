@@ -383,6 +383,9 @@ main {
 .header .DMM {
   grid-area: DMM;
 }
+.header .nav {
+  grid-area: nav;
+}
 
 .hero {
   grid-area: hero;
@@ -682,11 +685,18 @@ p {
     Navigation
 ============= */
 #nav-container {
-  height: 100%;
-  margin-bottom: 10px;
-  text-align: center;
+  background-color: #0A183F;
   display: none;
-  justify-content: left;
+  width: 100vw;
+  position: fixed;
+  top: 79px;
+}
+#nav-container .nav-btns {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 auto;
+  color: white;
+  width: 100%;
 }
 @media (min-width: 768px) {
   #nav-container {
